@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!--
+		Phaser is distributed under the MIT License. This covers the framework itself. Please see the trademark policy (https://phaser.io/download/trademark) for details about using the Phaser logo or branding.
+		Copyright © 2021 Richard Davey, Photon Storm Ltd.
+		Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and / or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+		The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+		THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+	-->
+	<script src="//cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+
+	<style type="text/css">
+		body {
+				padding: 0px;
+				margin: 0px;
+		}
+	</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+
+let config = {
+	type: Phaser.WEBGL,
+	width: 640,
+	height: 480,
+	scale: {
+		mode: Phaser.Scale.FIT,
+		autoCenter: Phaser.Scale.CENTER_BOTH
+	},
+	scene: {
+  	preload: preload,
+  	create: create,
+  	update: update
+	}
+};
+
+function preload() {
+}
+
+function create() {
+}
+
+function update() {
+}
+
+
+let game = new Phaser.Game(config);
+
+</script>
+
+</body>
+</html>
