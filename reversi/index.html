@@ -187,6 +187,11 @@ function preload() {
 
 function create() {
   pointer = this.input.activePointer;
+  this.input.on('pointerdown', function(pointer) {
+    if (playerType[turn] === ENUM.playerType.human) {
+      moveStone(Math.floor(pointer.x / STYLE.cellSize), Math.floor(pointer.y / STYLE.cellSize));
+    }
+  });
   cell = this.add.graphics();
   stone = this.add.graphics();
   assistMark = this.add.graphics();
@@ -206,14 +211,6 @@ function create() {
 }
 
 function update() {
-  if (pointer.isDown && !wasPointerDown) { // press
-  }
-  if (!pointer.isDown && wasPointerDown) { // release
-    if (playerType[turn] === ENUM.playerType.human) {
-      moveStone(Math.floor(pointer.x / STYLE.cellSize), Math.floor(pointer.y / STYLE.cellSize));
-    }
-  }
-  wasPointerDown = pointer.isDown;
 }
 
 
